@@ -1,0 +1,8 @@
+Comments:
+Much of this assignment was sourced from previous assignments and tutorials.
+Primarily tutorial 5,6,7 and assignment 4.
+
+I also sourced information from the internet including codeacademy, stackoverflow,
+and w3Schools.
+
+I have also collaborated with peers aswell Ben Hagel, Mat Schmid, Will Prado.

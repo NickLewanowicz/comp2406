@@ -1,0 +1,4 @@
+Made by Nicholas Lewanowicz 100937167
+
+I used the code examples from the first tutorial for a structure and contacted Ben Hagel 
+for further assistance with print errors. I also spoke with Mike Smith about the localeCompare

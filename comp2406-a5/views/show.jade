@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  nav style="width:150px;height:150px
+    ul
+      each label,i in logs
+         li #{label.file} #{label.date} #{label.time} #{label.host} #{label.service} #{label.message}
+
+  form(action="/", method="get")
+    button(type="home") Home

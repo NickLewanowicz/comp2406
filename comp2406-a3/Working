@@ -1,0 +1,26 @@
+COMP 2406 2016W Assignment #3
+ Nicholas Lewanowicz
+ 100937167
+
+1. RawContents is the raw data being passed in that contains your page data. It is a big string.
+   Lines is a 'split' version of rawContents it is an array of strings.
+   Split is a function which seperates unparsed data. By default splits by each 'new line' character.
+
+2. The 'finished' line will print immediately after line 23 is read but not necessarily after it is done reading the file.
+   If the file being read is a large file 'finished' will print before it is fully loaded because of the async nature of node.
+
+3. If line 48 was changed to say 'response.writeHead(404, {' then all pages would return 404
+
+4. In request handler you would modify line 92 to look for 'request.headers['user-agent'].indexOf('iPhone')>-1)' aswell as special characters.
+   'User Agent: iPhone' is the header that specifies the user is browsing on iPhone, when this is true it will send a 403
+
+5. a) Commenting out line 7 will break the program and cause it to not compile due to 'app' being called later in the function on line 16
+   b) The server will launch listening on port 3000 and regardless of the parameter passed it will always be port 3000
+   c) This would set the app setting 'views' to be the '.' directory (root) rather then the one directory specified in "path.join(__dirname, 'views')".
+      This means that the app wont be looking in the right folder and your webpage wont display.
+   d) 'module.exports' will be replaced by 'router' which is equal to the 'express.Router()'. This will clear the libraries being used and replace them with 'router'
+      If this is commented out you wont be able to use any of the functions within the express.Router() which will break things further in the program
+   e) When commenting out 'block content' the compiler will throw an error as it expects there to be an input to the body but there is nothing there.
+      Additionally when the index and add are read they reference 'block content' which isnt in the layout which will confuse the compiler.
+   f) If you change the indentation of the button is will no longer have a method or action associated with it. This would make the button still visable
+      but have no function.
