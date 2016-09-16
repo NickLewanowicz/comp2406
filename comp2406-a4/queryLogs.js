@@ -64,46 +64,19 @@ var myConsole = new Console(logStream);
 
 
 var findIt = function(db, callback){
-	//console.log("hello");'
-	//console.log(serviceExp);
-	//console.log(messageExp);
-		var curs = db.collection('logs').find({service: serviceExp, message: messageExp});
+    var curs = db.collection('logs').find({service: serviceExp, message: messageExp});
     var matched = [];
-    //console.log(cursor);
-    //curs.limit(maxCount).toArray(findCall);
-    //console.log("hello");
-
+    
     curs.each(function (err, log){
         if (log !== null){
-					matched.push(log);
-	        //console.log(logged.length);
+	    matched.push(log);
         }else{
-	        output(matched);
-	        callback();
+	    output(matched);
+	    callback();
         }
-			});
-};
-/*
-var findCall = function(err, dbstate)
-{
-    var logged = [];
-    console.log(dbstate);
-    console.log(dbstate.length);
-    console.log(serviceExp + " " + messageExp);
-    for(var i = 0 ;i<dbstate.length; i++){
-        console.log(i);
-        if (logged !== null) {
-
-	        matched.push(logged);
-	        console.log(logged.length);
-        } else {
-	        output(matched);
-	        callback();
-        }
-    }
+    });
 };
 
-*/
 var output = function(matched) {
 		if(matched.length > 0){
 			var outStr = "";
